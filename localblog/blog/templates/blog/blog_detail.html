@@ -1,0 +1,31 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+  <div class="post-details">
+    <h1>{{ blog.title }}</h1>
+    <p><strong>Post Date:</strong> {{ blog.created_at }}</p>
+    <p><strong>Author:</strong> <a href="{{blog.author.get_absolute_url}}">{{ blog.author }}</a></p>
+    <p><strong>Description: </strong> <br>{{  blog.content }}</p>
+  </div>
+
+  {% if comments %}
+  <h4>Comments</h4>
+  <ul>
+    {% for comment in comments %}
+    <div class="comment">
+      <strong>{{ comment.author }}</strong> - {{ comment.created_at|date:"F d, Y H:i" }}
+      <p>{{ comment.content }}</p>
+    </div>
+
+    {% empty %}
+    <li>No comments yet.</li>
+{% endfor %}
+  </ul>
+  {% endif %}
+
+
+  <a href="{% url 'comment' pk=blog.id %}">Comment on this post</a>
+
+
+{% endblock %}

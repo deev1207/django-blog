@@ -1,0 +1,25 @@
+#logout-form {
+  display: inline;
+}
+#logout-form button {
+  padding: 0;
+  margin: 0;
+}
+.post-details{
+  margin:20px 0px;
+}
+
+.col-sm-2{
+  margin: 20px 0px 0px 0px
+}
+
+.col-sm-10{
+  margin: 5px 0px 0px 0px
+}
+.comment{
+  border-bottom: 1px solid #cfcfcf; /* Adjust thickness and color as needed */
+  padding:10px;
+}
+
+
+

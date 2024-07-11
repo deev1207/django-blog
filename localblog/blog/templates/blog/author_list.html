@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% if author_list %}
+<div class="post-details">
+    <ul>
+        {% for author in author_list %}
+        <li>
+            <p> <a href="{{author.get_absolute_url}}">{{ author.name }}</a></p>
+        </li>
+    
+        {% endfor %}
+        {%else%}
+        <p>There are no users of the blog.</p>
+        {% endif %}
+    </ul>
+</div>
+
+
+{% endblock %}
