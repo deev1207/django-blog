@@ -31,10 +31,10 @@ SECRET_KEY = os.environ.get(
 # DEBUG = False
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['localhost',
+ALLOWED_HOSTS = ['deev1207.pythonanywhere.com', 'localhost',
                  '127.0.0.1',]
 
-
+CSRF_TRUSTED_ORIGINS = ['https://deev1207.pythonanywhere.com']
 # Application definition
 
 INSTALLED_APPS = [
